@@ -1,0 +1,21 @@
+[project]
+name = "restore_rds_from_snapshot"
+version = "0.1.0"
+description = "Load a directory of Parquet files from S3 into a PostgreSQL RDS instance"
+readme = "README.md"
+requires-python = ">=3.10"
+
+# Runtime dependencies (uv will lock these into uv.lock)
+dependencies = [
+    "pandas==2.3.2",
+    "sqlalchemy==2.0.43",
+    "psycopg[binary]==3.2.9",
+    "boto3",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["restore_rds_from_snapshot"]
